@@ -9,7 +9,7 @@ use App\frontend\ownerinformations;
 class categorys extends Model
 {
     protected $fillable = [
-       'id' ,'name', 
+       'id' ,'name',
     ];
     public function ownerinformations()
     {
@@ -17,11 +17,13 @@ class categorys extends Model
     }
     public function circulars ()
     {
-        return $this->hasMany('App\frontend\circulars');
+        return $this->hasMany(circulars::class,'category_id');
+
+
     }
      public function users ()
     {
         return $this->hasMany('App\users');
     }
-    
+
 }

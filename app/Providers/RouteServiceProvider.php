@@ -22,12 +22,22 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
+    // public const ADMIN_DASHBOARD = '/backend.layouts.amaster';
 
+    /**
+     * The path to the "admin" route for your application.
+     *
+     * @var string
+     */
+    public const ADMIN_DASHBOARD = 'admin';
+    public const OWNER_DASHBOARD = 'owner';
     /**
      * Define your route model bindings, pattern filters, etc.
      *
      * @return void
      */
+
+
     public function boot()
     {
         //

@@ -16,15 +16,15 @@ class category extends Controller
       //$categorys = DB::table('categorys')
             //->join('circulars', 'categorys.id', '=', 'circulars.category_id')->get();
       $categorys=categorys::select('id','name')->latest()->get();
-       return view('backend.pages.categoryindex',compact('categorys')); 
-      
+       return view('backend.pages.categoryindex',compact('categorys'));
+
     }
-    
+
     public function categorycreate()
       {
 
-       return view('backend.pages.categorycreate');     
-    
+       return view('backend.pages.categorycreate');
+
       }
       public function store(Request $request)
       {
@@ -47,11 +47,11 @@ class category extends Controller
        public function update($id)
     {
        $categorys=categorys::findorfail($id);
-       return view('backend.pages.categorysedit',compact('categorys'));  
+       return view('backend.pages.categorysedit',compact('categorys'));
     }
      public function edit (Request $request,$id )
       {
-       
+
         $categorys=categorys::findorfail($id);
         $categorys->name = $request->name;
         $categorys->save();
@@ -60,10 +60,13 @@ class category extends Controller
      }
       public function view($id)
      {
-       $categorys = DB::table('categorys')
-            ->Join('circulars', 'categorys.id', '=', 'circulars.category_id')->where('id',$id)->first();
-             return view('index',compact('categorys'));  
-      
-     } 
-       
+
+         $categorys=categorys::with('circulars')->select('id','name')->find($id);
+
+             return view('frontend.caindex',compact('categorys'));
+
+
+
+     }
+
 }

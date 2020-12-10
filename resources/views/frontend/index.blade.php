@@ -41,10 +41,10 @@
 			<h1>JOB Catagery</h1>
 		</div>
   <ul>
-  
+
    @foreach ($categorys as $category)
-   <li><a href="{{route('index.category',$category->id)}}">{{$category->name}}</a></li> 
-     @endforeach            
+   <li><a href="{{route('index.category',$category->id)}}">{{$category->name}}</a></li>
+     @endforeach
  </ul>
  </div>
     <div class="content">
@@ -55,9 +55,9 @@
     		<div class="clear"></div>
     	</div>
     	@foreach ($circulars as $circular)
-			<div class="section group">  
+			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					
+
 					 <h2>{{$circular->categorys->name}}</h2>
 					 <br>
 					 <h2>{{$circular->name}}</h2><br>
@@ -66,7 +66,7 @@
 				     <div class="button"><span><a href="{{route('view.job.circular',$circular->id)}}" class="details">Details</a></span>
 				   <h2 class="text-left" >Job Post:{{$circular->created_at}}</h2>
 				 <h2 class="text-right">Dead Line:{{$circular->created_at}}</h2>
-				 </div>     
+				 </div>
 				</div>
 				 @endforeach
 				</div>
