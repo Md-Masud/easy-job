@@ -32,10 +32,10 @@
          <select class="form-control form-control-lg"name="category_id"id="category_id">
            <option>Select Category</option>
            @foreach ($categorys as $country)
-         <option value="{{ $country->id }}"> 
-          {{ $country->name}} 
+         <option value="{{ $country->id }}">
+          {{ $country->name}}
          </option>
-          @endforeach   
+          @endforeach
          </select>
        </div>
        <div class="form-group">
@@ -57,6 +57,10 @@
         <div class="form-group">
          <label for="exampleInputEmail1">Salary Range</label>
          <input type="text" class="form-control"name="salary"  id=" name" placeholder="Salary Range">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Dateline</label>
+            <input type="date" class="form-control"name="dateline"  id=" name" placeholder="Dateline">
         </div>
         <button type="submit"  class="btn btn-info" name="Save"value="Save">Submit</button>
       </form>

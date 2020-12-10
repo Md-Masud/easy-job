@@ -15,27 +15,27 @@ class owner_parsonal_information extends Controller
 {
 	public function indexparsonal()
     {
-    	$ownerinformations=Auth::user()->ownerinformations()->select('id','counrty_id','name','description','email','web_address','facebook')->latest()->get();
-        return view('frontend.owner.page.viewinformation',compact('ownerinformations')); 
+    	$ownerinformations=Auth('owner')->user()->ownerinformations()->select('id','counrty_id','name','description','email','web_address','facebook')->latest()->get();
+        return view('frontend.owner.page.viewinformation',compact('ownerinformations'));
     }
     public function parsonal()
     {
     	$countrys=countrys::select('id','name')->latest()->get();
-         return view('frontend.owner.page.parsonal_information',compact('countrys'));  
+         return view('frontend.owner.page.parsonal_information',compact('countrys'));
     }
     public function store(Request $request)
       {
         $validatedData = $request->validate([
-  
+
     ]);
        $ownerinformations= new ownerinformations;
        $ownerinformations->counrty_id = $request->counrty_id;
-       $ownerinformations->user_id=Auth::id();
+       $ownerinformations->owner_id=Auth('owner')->id();
        $ownerinformations->name = $request->name;
        $ownerinformations->slug = Str::slug($request->name);
-       $ownerinformations->description= $request->description; 
-       $ownerinformations->email = $request->email; 
-       $ownerinformations->web_address = $request->web_address; 
+       $ownerinformations->description= $request->description;
+       $ownerinformations->email = $request->email;
+       $ownerinformations->web_address = $request->web_address;
        $ownerinformations->facebook = $request->facebook;
        $ownerinformations->save( $validatedData);
        Session::flash('Success','Create  Successfull');
@@ -45,21 +45,21 @@ class owner_parsonal_information extends Controller
     {
     	$ownerinformations=ownerinformations::findorfail($id);
     	$countrys=countrys::select('id','name')->latest()->get();
-         return view('frontend.owner.page.parsonal_information',compact('ownerinformations','countrys'));  
+         return view('frontend.owner.page.parsonal_information',compact('ownerinformations','countrys'));
     }
       public function edit(Request $request,$id)
       {
         $validatedData = $request->validate([
-  
+
     ]);
        $ownerinformations=ownerinformations::findorfail($id);
        $ownerinformations->counrty_id = $request->counrty_id;
-       $ownerinformations->user_id=Auth::id();
+       $ownerinformations->owner_id=Auth('owner')->id();
        $ownerinformations->name = $request->name;
        $ownerinformations->slug = Str::slug($request->name);
-       $ownerinformations->description= $request->description; 
-       $ownerinformations->email = $request->email; 
-       $ownerinformations->web_address = $request->web_address; 
+       $ownerinformations->description= $request->description;
+       $ownerinformations->email = $request->email;
+       $ownerinformations->web_address = $request->web_address;
        $ownerinformations->facebook = $request->facebook;
        $ownerinformations->save( $validatedData);
        Session::flash('Success','Create  Successfull');

@@ -22,11 +22,11 @@ class Authenticate extends Middleware
                 return route('adminlogin');
             }
         }
-       // elseif (Auth::guard('owner')) {
-           // if (!$request->expectsJson()) {
-              //  return route('ownerlogin');
-           /// }
-        //}
+       elseif (Auth::guard('owner')) {
+            if (!$request->expectsJson()) {
+               return route('ownerlogin');
+            }
+        }
         else {
             if (!$request->expectsJson()) {
                 return route('login');

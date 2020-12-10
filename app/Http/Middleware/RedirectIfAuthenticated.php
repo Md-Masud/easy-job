@@ -22,9 +22,9 @@ class RedirectIfAuthenticated
         if ($guard == "admin" && Auth::guard($guard)->check()) {
             return redirect(RouteServiceProvider::ADMIN_DASHBOARD);
         }
-        //if ($guard == "owner" && Auth::guard($guard)->check()) {
-           // return redirect(RouteServiceProvider::OWNER_DASHBOARD);
-       // }
+        if ($guard == "owner" && Auth::guard($guard)->check()) {
+            return redirect(RouteServiceProvider::OWNER_DASHBOARD);
+        }
         if (Auth::guard($guard)->check()) {
             return redirect(RouteServiceProvider::HOME);
         }

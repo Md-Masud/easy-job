@@ -50,7 +50,7 @@
                     <p><span class="price"></span></p>
                     <div class="button"><span><a href="{{route('view.job.circular',$circular->id)}}" class="details">Details</a></span>
                         <h2 class="text-left" >Job Post:{{$circular->created_at}}</h2>
-                        <h2 class="text-right">Dead Line:{{$circular->created_at}}</h2>
+                        <h2 class="text-right">Dead Line:{{$circular->dateline}}</h2>
                     </div>
                 </div>
                 @endforeach

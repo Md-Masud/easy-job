@@ -15,9 +15,9 @@ class create extends Controller
     public function index()
     {
         $categorys=categorys::select('id','name')->latest()->get();
-        $circulars=circulars::orderBy('id','desc')->select('id','category_id','name','description','vacancies','education','experience','additional','location','salary','created_at')->paginate(4);
-        return view('frontend.index',compact('circulars','categorys'));  
-    	
+        $circulars=circulars::orderBy('id','desc')->select('id','category_id','name','description','vacancies','education','experience','additional','location','salary','created_at','dateline')->paginate(4);
+        return view('frontend.index',compact('circulars','categorys'));
+
     }
 
    public function login()
@@ -38,15 +38,15 @@ class create extends Controller
     }
      public function uinformation ()
     {
-      return view('frontend.user.pages.user_information');  
+      return view('frontend.user.pages.user_information');
     }
     public function parsonal()
     {
-         return view('frontend.owner.page.parsonal_information');  
+         return view('frontend.owner.page.parsonal_information');
     }
      public function adminindex()
     {
-         return view('frontend.admin.layouts.amaster');  
+         return view('frontend.admin.layouts.amaster');
     }
-   
+
 }

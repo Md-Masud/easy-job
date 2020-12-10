@@ -84,6 +84,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\backend\Admin::class,
         ],
+        'owners' => [
+            'driver' => 'eloquent',
+            'model' => App\frontend\Owner::class,
+        ],
 
     ],
 

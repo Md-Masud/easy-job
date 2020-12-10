@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class circulars extends Model
 {
     protected $fillable = [
-      'id', 'category_id','user_id', 'name', 'slug','description','education','vacancies','experience','additional','location','salary',
+      'id', 'category_id','owner_id', 'name', 'slug','description','education','vacancies','experience','additional','location','salary','dateline',
     ];
    public function categorys()
     {

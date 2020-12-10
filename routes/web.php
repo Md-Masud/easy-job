@@ -32,19 +32,19 @@ Route::namespace('backend')->group(function()
 });
 //owner auth
 //owner registration
-//Route::namespace('Owner')->group(function()
-//{
-  //  Route::get('ownerRegistration','RegistrationController@showRegisterForm')->name('ownerRegister');
- //   Route::post('ownerRegistration','RegistrationController@processRegister')->name('ownerRegistration');
-    //Route::get('ownerlogin','LoginController@showOwnerLoginForm')->name('ownerlogin');
-   // Route::post('ownerlogin','LoginController@adminLogin');
-   // Route::get('adminlogout','LoginController@adminlogout')->name('adminlogout');
+Route::namespace('Owner')->group(function()
+{
+    Route::get('ownerRegistration','RegistrationController@showRegisterForm')->name('ownerRegister');
+    Route::post('ownerRegistration','RegistrationController@processRegister')->name('ownerRegistration');
+    Route::get('ownerlogin','LoginController@showOwnerLoginForm')->name('ownerlogin');
+    Route::post('ownerlogin','LoginController@adminLogin');
+    Route::get('adminlogout','LoginController@adminlogout')->name('adminlogout');
 
-//});
-//Route::group(['middleware' => 'auth:owner'], function () {
-  //  Route::view('/owner', 'frontend.layouts.master');
-   // Route::view('owner', 'frontend.layouts.master')->name('Owner');
-//});
+});
+Route::group(['middleware' => 'auth:owner'], function () {
+    Route::view('/owner', 'frontend.layouts.master');
+    Route::view('owner', 'frontend.layouts.master')->name('Owner');
+});
 //owner route
 Route::namespace('frontend')->group(function()
 {
@@ -55,7 +55,7 @@ Route::namespace('frontend')->group(function()
     Route::get('personal_information.delete{id}','owner_parsonal_information@destroy')->name('admin.nformation.delete');
 });
 //job circular
-Route::namespace('frontend')->middleware('auth')->group(function()
+Route::namespace('frontend')->middleware('auth:owner')->group(function()
 {
 
     Route::get('job.circular','job_circular@indexcircular')->name('job.circular');
@@ -72,7 +72,7 @@ Route::name('admin.')->namespace('frontend')->group(function()
     Route::get('/','create@index')->name('index');
     Route::get('accoun', 'create@account')->name('accoun');
     Route::get('log', 'create@login')->name('log');
-    Route::get('owner', 'create@company')->name('company')->middleware('auth');
+    Route::get('owner', 'create@company')->name('company')->middleware('auth:owner');
     Route::get('user', 'create@user')->name('users')->middleware('auth');
     Route::get('user_personal_information','create@uinformation')->name('information');
 });
