@@ -13,7 +13,8 @@
 <body>
 <div class="signup-form">
       <form method="POST" action="{{ route('register') }}">
-        @csrf>
+        @csrf
+          <h2 style="text-align: center">User Registration</h2>
         <h2>Sign Up</h2>
         <div class="form-group">
             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Username">
@@ -43,8 +44,8 @@
         </div>
         <div class="form-group">
              <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
-             
-        </div>        
+
+        </div>
         <div class="form-group">
            <!-- <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>-->
         </div>
@@ -55,4 +56,4 @@
     <div class="text-center">Already have an account? <a href="{{asset('login')}}">Login here</a></div>
 </div>
 </body>
-</html>                            
+</html>

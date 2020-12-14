@@ -30,7 +30,7 @@ class HomeController extends Controller
    public function index()
     {
          $categorys=categorys::select('id','name')->latest()->get();
-        $circulars=circulars::orderBy('id','desc')->select('id','category_id','name','description','vacancies','education','experience','additional','location','salary','created_at')->paginate(4);
-        return view('frontend.index',compact('circulars','categorys'));  
+        $circulars=circulars::orderBy('id','desc')->select('id','category_id','owner_id','name','description','vacancies','education','experience','additional','location','salary','created_at','dateline')->paginate(4);
+        return view('frontend.index',compact('circulars','categorys'));
     }
 }

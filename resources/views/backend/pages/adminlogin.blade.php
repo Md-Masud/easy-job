@@ -23,7 +23,7 @@
     <div class="d-flex justify-content-center h-100">
         <div class="card">
             <div class="card-header">
-                <h3 style="text-align: center">Admin</h3>
+                <h3 style="text-align: center">Admin Login</h3>
                 <h3>Sign In</h3>
                 @if(Session::has('message'))
                     <div class=" alert alert-{{Session::get('type')}}">

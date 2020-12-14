@@ -93,33 +93,24 @@
     <section class="subscribe-section  " style="margin:30px; border: royalblue; border-radius: 3px;">
         <div class="container">
 
-                <div   class="subscribe  py-3">
+            <div class="subscribe  py-3">
 
-                    <div style="margin: 5px 10px;"class="rwo ">
-                        <h4>{{$circulars->name}} </h4>
-                        <h4{{$circulars->Owner->name}}</h4>
-                        <h4>{{$circulars->categorys->name}} </h4>
-                        <h4 style="font-weight: bold;">No. of Vacancies:</h4>
-                        <h4>{{$circulars->vacancies}}</h4>
-                        <h4 style="font-weight: bold;">Job description:</h4>
-                        <h6>{{$circulars->description}}</h6>
-                        <h4 style="font-weight: bold;">Educational Requirements:</h4>
-                        <h6>{{$circulars->education}}</h6>
-                        <h4 style="font-weight: bold;" >Experience Requirements:</h4>
-                        <h6>{{$circulars->experience}}</h6>
-                        <h4 style="font-weight: bold;">Additional Job Requirements:</h4>
-                        <h6>{{$circulars->additional}}</h6>
-                        <h4 style="font-weight: bold;">Location:</h4>
-                        <h6>{{$circulars->location}}</h6>
-                        <h4 style="font-weight: bold;">Salary:</h4>
-                        <h6>{{$circulars->salary}}</h6>
-
-                        <a style="margin-left: 500px;  text-align:center;font-weight: bold;"  class="btn btn-info" href="{{route('resume.create',$circulars->id)}}">Apply Online</a>
-
-                    </div>
-
+                <div class="rwo ">
+                    <form action="{{route('resume.store')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label for="usr">Rusume:</label>
+                            <input type="file" class="form-control" id="usr" name="photo">
+                            <input type="hidden" value="{{$circulars->id}}" name="circular_id">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
-        </div>
 
+            </div>
+
+            </div>
+        </div>
+        </div>
     </section>
 @endsection

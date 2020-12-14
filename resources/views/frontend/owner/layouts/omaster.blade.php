@@ -41,7 +41,7 @@
         <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
         <a href="{{route('admin.nformation.view')}}" class="list-group-item list-group-item-warning">Company Information</a>
         <a href="{{route('job.circular')}}" class="list-group-item list-group-item-action active">Job Circutar</a>
-         <a href="#" class="list-group-item list-group-item-warning ">CV Filer</a>
+         <a href="{{route('resume.view')}}" class="list-group-item list-group-item-warning ">CV Filer</a>
         <a href="#" class="list-group-item list-group-item-dark">Qusetion</a>
         <a href="#" class="list-group-item list-group-item-action active">Online Exam</a>
         <a href="#" class="list-group-item list-group-item-dark">Mark</a>
@@ -53,7 +53,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-     
+
          <nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
         <button class="btn btn-primary" id="menu-toggle">
           <span class="navbar-toggler-icon"></span>
@@ -103,7 +103,7 @@ $(document).ready(function(){
   });
 });
 </script>
-        
+
       </div>
     </div>
     <!-- /#page-content-wrapper -->

@@ -13,8 +13,8 @@
 <body>
 <div class="signup-form">
     <form method="POST" action="{{route('ownerRegistration')}}">
-        @csrf>
-        <h2 style="text-align: center">Owner </h2>
+        @csrf
+        <h2 style="text-align: center">Owner Registration </h2>
         <h2>Sign Up</h2>
         @if(Session::has('message'))
             <div class=" alert alert-{{Session::get('type')}}">
@@ -22,7 +22,7 @@
             </div>
         @endif
         <div class="form-group">
-            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Username">
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder=" Company Name">
 
             @error('name')
             <span class="invalid-feedback" role="alert">
@@ -58,7 +58,11 @@
             <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
         </div>
     </form>
-    <div class="text-center">Already have an account? <a href="{{asset('login')}}">Login here</a></div>
+</div>
+<div class="card-footer">
+    <div class="d-flex justify-content-center links">
+        Don't have an account?<a href="{{asset('ownerlogin')}}">Sign Up</a>
+    </div>
 </div>
 </body>
 </html>

@@ -1,141 +1,141 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
+
 <head>
-<title>JOB Service</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')}}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
-<link href="{{asset('css/menu.css')}}" rel="stylesheet" type="text/css" media="all"/>
-<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<script src="js/jquerymain.js"></script>
-<script src="js/script.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script> 
-<script type="text/javascript" src="js/nav-hover.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
-
-<script type="text/javascript">
-  $(document).ready(function($){
-    $('#dc_mega-menu-orange').dcMegaMenu({rowItems:'4',speed:'fast',effect:'fade'});
-  });
-</script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <!-- MAIN CSS-->
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <!--my responsive-->
+    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <!--- FONT AWESOME -->
+    <link rel="stylesheet" type="text/css" href="{{asset('css/all.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/meanmenu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}">
+    <!--- awl carousel -->
+    <link rel="stylesheet" type="text/css" href="{{asset('css/owl.carousel.min.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Easy job</title>
 </head>
 <body>
-  <div class="wrap">
-		<div class="header_top">
-			
-  
-<div class="header_top">
-			<div class="logo">
-				<h1> Digital Job </h1>
-			</div>
-			 
-		 <div class="clear"></div>
-	
-	 <div class="clear"></div>
- </div>
-</div>
- <!--main contaion-->
- @yield('contain')
-	
-				
-	<!--fooder-->    
-   <div class="footer">
-   	  <div class="wrapper">	
-	     <div class="section group">
-				<div class="col_1_of_4 span_1_of_4">
-						<h4>Information</h4>
-						<ul>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Job Aplication</a></li>
-						<li><a href="#"><span>Job Circular</span></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"><span>Contact Us</span></a></li>
-						</ul>
-					</div>
-				<div class="col_1_of_4 span_1_of_4">
-					<h4>Company</h4>
-						<ul>
-						<li><a href="about.html">Sing In</a></li>
-						<li><a href="faq.html">Job Circular</a></li>
-						<li><a href="#">Select Candidate</a></li>
-						<li><a href="contact.html"><span>Online Exam</span></a></li>
-						<li><a href="preview.html"><span>View Candidate</span></a></li>
-						</ul>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					<h4>My account</h4>
-						<ul>
-							<li><a href="contact.html">Sign In</a></li>
-							<li><a href="index.html">View profil</a></li>
-							<li><a href="#">Job Aplication</a></li>
-							<li><a href="#">Upload CV</a></li>
-							<li><a href="faq.html">Help</a></li>
-						</ul>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					<h4>Contact</h4>
-						<ul>
-							<li><span>+88-01733714091</span></li>
-							<li><span>+88-01937815121</span></li>
-						</ul>
-						<div class="social-icons">
-							<h4>Follow Us</h4>
-					   		  <ul>
-							      <li class="facebook"><a href="#" target="_blank"> </a></li>
-							      <li class="twitter"><a href="#" target="_blank"> </a></li>
-							      <li class="googleplus"><a href="#" target="_blank"> </a></li>
-							      <li class="contact"><a href="#" target="_blank"> </a></li>
-							      <div class="clear"></div>
-						     </ul>
-   	 					</div>
-				</div>
-			</div>
-			<div class="copy_right">
-				<p>Easy job Solution</p>
-		   </div>
-     </div>
+<!-- Header Area -->
+
+<!-- Carosel Area start-->
+@yield('contain')
+
+<!--Footer-section start-->
+
+<footer>
+    <div class="container">
+        <div class="footer-area">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-sm-5">
+                    <div class="footer-widget">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">News & Stories</a></li>
+                            <li><a href="#"> History</a></li>
+                            <li><a href="#">Our Studio</a></li>
+                            <li><a href="#">Showrooms</a></li>
+                            <li><a href="#">Stockists</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-sm-5">
+                    <div class="footer-widget">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">News & Stories</a></li>
+                            <li><a href="#"> History</a></li>
+                            <li><a href="#">Our Studio</a></li>
+                            <li><a href="#">Showrooms</a></li>
+                            <li><a href="#">Stockists</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="footer-widget">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">News & Stories</a></li>
+                            <li><a href="#"> History</a></li>
+                            <li><a href="#">Our Studio</a></li>
+                            <li><a href="#">Showrooms</a></li>
+                            <li><a href="#">Stockists</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="footer-widget">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">News & Stories</a></li>
+                            <li><a href="#"> History</a></li>
+                            <li><a href="#">Our Studio</a></li>
+                            <li><a href="#">Showrooms</a></li>
+                            <li><a href="#">Stockists</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			var defaults = {
-	  			containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-	 		};
-			*/
-			
-			$().UItoTop({ easingType: 'easeOutQuart' });
-			
-		});
-	</script>
-    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-    <link href="css/flexslider.css" rel='stylesheet' type='text/css' />
-	  <script defer src="js/jquery.flexslider.js"></script>
-	  <script type="text/javascript">
-		$(function(){
-		  SyntaxHighlighter.all();
-		});
-		$(window).load(function(){
-		  $('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-		  });
-		});
-	  </script>
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-8 ">
+                    <div class="footer-menu  d-flex align-items-center ">
+                        <nav class="">
+                            <ul>
+                                <li><a href="#">About Us </a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Order Tracking</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-4 ">
+                    <div class="footer-icon d-flex justify-content-end align-items-center">
+                        <span>Connect with us:</span>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-skype"></i></a>
+                        <a href="#"><i class="fab fa-skype"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer-section End-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/jquery.meanmenu.min.js')}}"></script>
+<script src="{{asset('js/slick.min.js')}}"></script>
+<script src="{{asset('js/jquery.nice-select.min.js')}}"></script>
+
+<!-- My Js-->
+<script src="{{asset('js/main.js')}}"></script>
 </body>
+
 </html>

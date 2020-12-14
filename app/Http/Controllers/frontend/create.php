@@ -15,9 +15,15 @@ class create extends Controller
     public function index()
     {
         $categorys=categorys::select('id','name')->latest()->get();
-        $circulars=circulars::orderBy('id','desc')->select('id','category_id','name','description','vacancies','education','experience','additional','location','salary','created_at','dateline')->paginate(4);
+        $circulars=circulars::orderBy('id','desc')->select('id','category_id','owner_id','name','description','vacancies','education','experience','additional','location','salary','created_at','dateline')->paginate(4);
         return view('frontend.index',compact('circulars','categorys'));
 
+    }
+    public function jobView($id)
+    {
+        $categorys=categorys::select('id','name')->latest()->get();
+        $circulars=circulars::findorfail($id);
+        return view ('frontend.owner.page.viewCircular',compact('circulars','categorys'));
     }
 
    public function login()

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\frontend\circulars;
-use App\frontend\ownerinformations;
+use App\frontend\Owner;
 use App\backend\categorys ;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +16,7 @@ class job_circular extends Controller
     public function indexcircular()
     {
 
-     $circulars=Auth('owner')->user()->circulars()->select('id','category_id','name','description','vacancies','education','experience','additional','location','salary','dateline')->latest()->get();
+     $circulars=Auth('owner')->user()->circulars()->select('id','category_id','owner_id','name','description','vacancies','education','experience','additional','location','salary','dateline')->latest()->get();
         return view('frontend.owner.page.viewjobcircular',compact('circulars'));
     }
     public function circularview()

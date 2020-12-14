@@ -77,6 +77,17 @@ Route::name('admin.')->namespace('frontend')->group(function()
     Route::get('user_personal_information','create@uinformation')->name('information');
 });
 //Route::get('owner', 'frontend/create@company')->name('company')->middleware('auth:owner');
+Route::namespace('frontend')->group(function()
+{
+    Route::get('circular.view{id}','create@jobView')->name('job.view');
+});
+// Resume
+Route::namespace('frontend')->group(function()
+{
+    Route::get('stored.resume{id}','ResumeController@crateView')->name('resume.create');
+    Route::post('store.resume','ResumeController@ResumeStore')->name('resume.store');
+    Route::get('resume.view','ResumeController@indexResume')->name('resume.view');
+});
 
 //user auth
 Auth::routes();

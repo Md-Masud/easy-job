@@ -60,7 +60,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Dateline</label>
-            <input type="date" class="form-control"name="dateline"  id=" name" placeholder="Dateline">
+            <input type="datetime-local" class="form-control"name="dateline"  id=" name" placeholder="Dateline">
         </div>
         <button type="submit"  class="btn btn-info" name="Save"value="Save">Submit</button>
       </form>
