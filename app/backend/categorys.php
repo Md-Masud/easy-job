@@ -19,7 +19,6 @@ class categorys extends Model
     {
         return $this->hasMany(circulars::class,'category_id');
 
-
     }
      public function users ()
     {

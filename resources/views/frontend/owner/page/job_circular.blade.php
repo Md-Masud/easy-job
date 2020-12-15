@@ -16,8 +16,8 @@
      <form action="{{route('store.jobcircular')}}" method="post">
       @csrf
         <div class="form-group">
-         <label for="exampleInputEmail1">Name of company</label>
-         <input type="text" class="form-control"name="name"  id=" name" placeholder="Name of company">
+         <label for="exampleInputEmail1">Job position</label>
+         <input type="text" class="form-control"name="name"  id=" name" placeholder="Job position">
         </div>
         <div class="form-group">
          <label for="exampleInputEmail1">No. of Vacancies</label>

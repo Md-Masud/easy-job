@@ -1,6 +1,9 @@
 
 @extends('frontend.layouts.master')
 @section('contain')
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <div class="header-section">
         <div class="container position-relative">
@@ -85,39 +88,35 @@
         </div>
     </div>
 
+
     <!--job circular-section start-->
     <!--circular-section End-->
 
     <!--job circular-section start-->
-
+    @foreach ($categorys->circulars as $circular)
         <section class="subscribe-section  " style="margin:30px; border: royalblue; border-radius: 3px;">
             <div class="container">
-                @foreach ($categorys->circulars as $circular)
-                <div class="subscribe text-center py-3">
 
-                    <div class="rwo ">
-                        <a  href="{{route('view.job.circular',$circular->id)}}">
-                            <a style=" font-weight: bold;font-size: 40px;" href="{{route('job.view',$circular->id)}}">{{$circular->categorys->name}}</a>
-                            <h3 style=" margin:5px 30px;  color:green;font-weight:bold;">{{$circular->categorys->name}}</h3>
-                            <h4  style='margin:5px 30px; font-weight: bold;font-size:24px' class='fas'>&#xf3c5; {{$circular->Owner->name}}</h4><br>
-                            <p style="font-size:24px ;text-align: left; margin: 10px;" class='fas'>&#xf19d;{{$circular->education}}</p><br>
-                            <p style="font-size:24px ;text-align: left; margin: 10px;"  class='fas'>&#xf24d;{{$circular->education}}</p>
+                <div class="subscribe  py-3">
+
+                    <div style=" margin: 5px 10px;" class="rwo ">
 
 
+                        <h3 style=" margin:5px 15px;  color:green;font-weight:bold;">{{$circular->name}}</h3>
+                        <h4  style='margin:5px 15px; color:green; font-weight: bold;font-size:24px'>  {{$circular->Owner->name}}</h4><br>
+                        <h4  style='margin:5px 15px; font-weight: bold;font-size:24px' class='fas'>&#xf3c5; {{$circular->location}}</h4><br>
+                        <p style="margin:5px 15px ; font-size:24px ;text-align: left; " class='fas'>&#xf19d;{{$circular->education}}</p><br>
+                        <p style="font-size:24px ;text-align: left; margin: 5px 15px;"  class='fas'>&#xf24d;{{$circular->experience}}</p>
+                        <h3 style="text-align: right;">Dead Line:{{$circular->dateline}}</h3>
+                        <a style=" text-align: left; font-weight: bold;font-size: 30px;" href="{{route('job.view',$circular->id)}}">Details</a>
 
-                            <h3>Dead Line:{{$circular->dateline}}</h3>
-
-                        </a>
                     </div>
 
                 </div>
             </div>
-            </div>
+
         </section>
     @endforeach
-    <div style="text-align: center">
-    </div>
-
 
 @endsection
 

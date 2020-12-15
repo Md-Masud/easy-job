@@ -57,12 +57,13 @@ Route::namespace('frontend')->group(function()
 //job circular
 Route::namespace('frontend')->middleware('auth:owner')->group(function()
 {
-
     Route::get('job.circular','job_circular@indexcircular')->name('job.circular');
     Route::get('create/job_circular','job_circular@circularview')->name('create.job.circular');
     Route::post('store.jobcircular','job_circular@store')->name('store.jobcircular');
     Route::get('jobcircular.delete{id}','job_circular@destroy')->name('jobcircular.delete');
     Route::get('jobcircular.view{id}','job_circular@view')->name('view.job.circular');
+    Route::get('resumes.view{id}','job_circular@ResumeView')->name('resume.view');
+    Route::get('resume.view{id}','ResumeController@view')->name('r.view');
 });
 
 
@@ -86,9 +87,15 @@ Route::namespace('frontend')->group(function()
 {
     Route::get('stored.resume{id}','ResumeController@crateView')->name('resume.create');
     Route::post('store.resume','ResumeController@ResumeStore')->name('resume.store');
-    Route::get('resume.view','ResumeController@indexResume')->name('resume.view');
-});
 
+});
+// select resume
+Route::namespace('frontend')->group(function()
+{
+    Route::post('select.resume','SelectResumeController@SelectResumeStore')->name('select.resume');
+    Route::get('select.cv','SelectResumeController@ResumeView')->name('select.resume');
+
+});
 //user auth
 Auth::routes();
 
@@ -97,8 +104,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth:admin'], function () {
     Route::view('/admin', 'backend.layouts.amaster');
     Route::view('/admin', 'backend.layouts.amaster')->name('admin');
-});
 
+});
+//user list and owner list
+Route::namespace('Admin')->group(function()
+{
+    Route::post('user.list','UserController@userList')->name('userList');
+    Route::get('select.cv','OwnerController@ownerList')->name('ownerList');
+
+});
+Route::view('user.list', '')->name('userList');
 //Admin login
 Route::get('adminlogin','Admin\LoginController@showAdminLoginForm')->name('adminlogin');
 Route::post('adminlogin','Admin\LoginController@adminLogin');

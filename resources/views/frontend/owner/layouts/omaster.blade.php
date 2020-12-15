@@ -41,8 +41,8 @@
         <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
         <a href="{{route('admin.nformation.view')}}" class="list-group-item list-group-item-warning">Company Information</a>
         <a href="{{route('job.circular')}}" class="list-group-item list-group-item-action active">Job Circutar</a>
-         <a href="{{route('resume.view')}}" class="list-group-item list-group-item-warning ">CV Filer</a>
-        <a href="#" class="list-group-item list-group-item-dark">Qusetion</a>
+
+        <a href="{{route('select.resume')}}" class="list-group-item list-group-item-dark">Select Cv</a>
         <a href="#" class="list-group-item list-group-item-action active">Online Exam</a>
         <a href="#" class="list-group-item list-group-item-dark">Mark</a>
         <a href="#" class="list-group-item list-group-item-action active">Logout</a>

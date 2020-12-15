@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6 mb-sm-5">
                     <div class="footer-widget">
-                        <h3>About</h3>
+                        <h3>About Us</h3>
                         <ul>
                             <li><a href="#">News & Stories</a></li>
                             <li><a href="#"> History</a></li>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 mb-sm-5">
                     <div class="footer-widget">
-                        <h3>About</h3>
+                        <h3>Job Seekers</h3>
                         <ul>
                             <li><a href="#">News & Stories</a></li>
                             <li><a href="#"> History</a></li>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 ">
                     <div class="footer-widget">
-                        <h3>About</h3>
+                        <h3>Employees</h3>
                         <ul>
                             <li><a href="#">News & Stories</a></li>
                             <li><a href="#"> History</a></li>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 ">
                     <div class="footer-widget">
-                        <h3>About</h3>
+                        <h3>Tools & Social Media</h3>
                         <ul>
                             <li><a href="#">News & Stories</a></li>
                             <li><a href="#"> History</a></li>

@@ -18,15 +18,14 @@
                     <table class="table">
                         <thead>
                         <th>User name</th>
-                        <th>Resume</th>
+                        <th>Email</th>
                         </thead>
                         <tbody>
                         <tr>
-                            @foreach ($circular->resumes as $resume)
-                                <td>{{$resume->User->name}}</td>
-                                <td><iframe src="{{asset('uploads/images/'.$resume->photo)}}" height="100" width="100"></iframe></td>
+                            @foreach ($selectResume as $selectResumes)
+                                <td>{{$selectResumes->Resume->User->name}}</td>
+                                <td>{{$selectResumes->Resume->User->email}}</td>
                                 <td>
-                                    <a class="btn btn-info" href="{{route('r.view',$resume->id)}}">Rusume view</a>
                                 </td>
                         </tr >
                         </tbody>

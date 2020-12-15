@@ -92,7 +92,11 @@
 
     <section class="subscribe-section  " style="margin:30px; border: royalblue; border-radius: 3px;">
         <div class="container">
-
+            @if(Session::has('message'))
+                <div class=" alert alert-{{Session::get('type')}}">
+                    {{Session::get('message')}}
+                </div>
+            @endif
             <div class="subscribe  py-3">
 
                 <div class="rwo ">

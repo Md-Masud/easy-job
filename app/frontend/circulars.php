@@ -19,4 +19,8 @@ class circulars extends Model
     {
         return $this->belongsTo(Owner::class,'owner_id');
     }
+    public function resumes ()
+    {
+        return $this->hasMany(Resume::class,'circular_id');
+    }
 }

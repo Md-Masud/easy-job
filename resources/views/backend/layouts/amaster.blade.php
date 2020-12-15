@@ -53,7 +53,7 @@
     <div class="card">
       <div class="card-header">
         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-           Address 
+           Address
         </a>
       </div>
       <div id="collapseThree" class="collapse" data-parent="#accordion">
@@ -63,8 +63,8 @@
     </div>
   </div>
   <a href="{{route('Category.view')}}" class="list-group-item list-group-item-action active">Category</a>
-        <a href="#" class="list-group-item list-group-item-warning">User List</a>
-        <a href="#" class="list-group-item list-group-item-action active">Owner List</a>
+        <a href="{{route('userList')}}" class="list-group-item list-group-item-warning">User List</a>
+        <a href="{{route('ownerList')}}" class="list-group-item list-group-item-action active">Owner List</a>
       <a href="#" class="list-group-item list-group-item-dark">Message</a>
         <a href="#" class="list-group-item list-group-item-warning ">CV Filer</a>
         <a href="#" class="list-group-item list-group-item-dark">Qusetion</a>
@@ -112,9 +112,9 @@
       </nav>
 
       <div class="container-fluid data-spy="scroll">
-       
+
       @yield('contain')
-        
+
       </div>
     </div>
     <!-- /#page-content-wrapper -->

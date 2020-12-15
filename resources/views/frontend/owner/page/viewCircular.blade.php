@@ -96,23 +96,37 @@
                 <div   class="subscribe  py-3">
 
                     <div style="margin: 5px 10px;"class="rwo ">
-                        <h4>{{$circulars->name}} </h4>
-                        <h4{{$circulars->Owner->name}}</h4>
-                        <h4>{{$circulars->categorys->name}} </h4>
+                        <h3 style="  color:green;font-weight:bold;">{{$circulars->name}} </h3>
+                        <h3 style="  color:green;font-weight:bold;">{{$circulars->Owner->name}}</h3>
                         <h4 style="font-weight: bold;">No. of Vacancies:</h4>
-                        <h4>{{$circulars->vacancies}}</h4>
+                        <h4 style="margin-left: 30px;">{{$circulars->vacancies}}</h4>
                         <h4 style="font-weight: bold;">Job description:</h4>
-                        <h6>{{$circulars->description}}</h6>
+                        <ul style="  list-style-type: square;">
+                            <li>{{$circulars->description}}</li>
+                        </ul>
+
                         <h4 style="font-weight: bold;">Educational Requirements:</h4>
-                        <h6>{{$circulars->education}}</h6>
+                        <ul style="  list-style-type: square;">
+                            <li>{{$circulars->education}}</li>
+                        </ul>
+
                         <h4 style="font-weight: bold;" >Experience Requirements:</h4>
-                        <h6>{{$circulars->experience}}</h6>
+                        <ul style="  list-style-type: square;">
+                            <li>{{$circulars->experience}}</li>
+                        </ul>
                         <h4 style="font-weight: bold;">Additional Job Requirements:</h4>
-                        <h6>{{$circulars->additional}}</h6>
+                        <ul style="  list-style-type: square;">
+                            <li>{{$circulars->additional}}</li>
+                        </ul>
+
                         <h4 style="font-weight: bold;">Location:</h4>
-                        <h6>{{$circulars->location}}</h6>
+                        <ul style="  list-style-type: square;">
+                            <li>{{$circulars->location}}</li>
+                        </ul>
                         <h4 style="font-weight: bold;">Salary:</h4>
-                        <h6>{{$circulars->salary}}</h6>
+                        <ul style="  list-style-type: square;">
+                            <li>{{$circulars->salary}}</li>
+                        </ul>
 
                         <a style="margin-left: 500px;  text-align:center;font-weight: bold;"  class="btn btn-info" href="{{route('resume.create',$circulars->id)}}">Apply Online</a>
 

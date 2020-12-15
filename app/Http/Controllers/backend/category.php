@@ -65,8 +65,6 @@ class category extends Controller
 
              return view('frontend.caindex',compact('categorys'));
 
-
-
      }
 
 }

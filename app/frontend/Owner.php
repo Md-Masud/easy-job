@@ -1,10 +1,12 @@
 <?php
 
 namespace App\frontend;
+
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\frontend\circulars;
+
 use App\frontend\ownerinformations;
 
 class Owner extends Authenticatable
@@ -37,12 +39,14 @@ class Owner extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function ownerinformations()
+    public function circulars ()
     {
-        return $this->hasMany('App\frontend\ownerinformations');
+        return $this->hasMany(circulars::class,'owner_id');
     }
-    public function circulars()
+    public function selectResumes ()
     {
-        return $this->hasMany('App\frontend\circulars');
+        return $this->hasMany(SelectResume::class,'owner_id');
     }
+
+
 }
